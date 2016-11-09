@@ -1,0 +1,1 @@
+function run(msg, matches) local title , res = http.request('http://emrani.net/hafez/api/hafez/fal') if res ~= 200 then return "خطا!\n by @TURBO_TM" end local jdat = json:decode(title)local text = jdat.poem.."\nby @TURBO_TM" return text end return { patterns = {"^فال$"}, run = run }
